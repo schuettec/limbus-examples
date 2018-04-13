@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.schuettec.limbus</groupId>
+		<artifactId>limbus-examples</artifactId>
+		<version>0.0.1</version>
+	</parent>
+	<artifactId>basic-plugin</artifactId>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.remondis.limbus</groupId>
+				<artifactId>limbus-depchain-plugin</artifactId>
+				<version>${limbus.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<dependencies>
+		<!-- The dependency to the host (showcase-launcher): The showcase defines 
+			a plugin interface that is used to interact with the plugin. This interface 
+			must be available. -->
+		<dependency>
+			<groupId>com.github.schuettec.limbus</groupId>
+			<artifactId>basic-example</artifactId>
+			<version>${project.version}</version>
+			<!-- The host is available at runtime and may not be loaded by the plugin 
+				classloader! -->
+			<scope>provided</scope>
+		</dependency>
+		<!-- Runtime API is used to develop plugins -->
+		<dependency>
+			<groupId>com.remondis.limbus</groupId>
+			<artifactId>limbus-engine-api</artifactId>
+		</dependency>
+	</dependencies>
+</project>

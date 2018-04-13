@@ -47,6 +47,9 @@
 	</profiles>
 
 	<properties>
+		<!-- Limbus Version used in this examples -->
+		<limbus.version>2.0.2</limbus.version>
+		
 		<!-- Shared Directory -->
 		<sharedDirectory>${project.basedir}</sharedDirectory>
 
@@ -134,7 +137,7 @@
 			<dependency>
 				<groupId>com.remondis.limbus</groupId>
 				<artifactId>limbus-depchain-host</artifactId>
-				<version>2.0.2</version>
+				<version>${limbus.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -155,5 +158,6 @@
 	</dependencies>
 	<modules>
 		<module>basic-example</module>
+		<module>basic-plugin</module>
 	</modules>
 </project>
