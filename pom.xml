@@ -153,4 +153,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<modules>
+		<module>basic-example</module>
+	</modules>
 </project>
