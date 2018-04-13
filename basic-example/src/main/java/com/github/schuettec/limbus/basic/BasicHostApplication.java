@@ -1,12 +1,6 @@
 package com.github.schuettec.limbus.basic;
 
-import java.io.InputStream;
-
-import com.remondis.limbus.DeployService;
-import com.remondis.limbus.LimbusEngine;
-import com.remondis.limbus.launcher.EngineLauncher;
-import com.remondis.limbus.launcher.SystemEngine;
-import com.remondis.limbus.utils.SerializeException;
+import com.remondis.limbus.LimbusEngineImpl;
 
 /**
  * This is the implementation of the host application that loads plugins using
@@ -15,15 +9,14 @@ import com.remondis.limbus.utils.SerializeException;
  * @author schuettec
  *
  */
-public class BasicHostApplication {
+public class BasicHostApplication extends LimbusEngineImpl {
 
-	public static void main(String[] args) throws SerializeException, Exception {
+  @Override
+  protected String[] getPublicAccessPackages() {
+    return new String[] {
+        getClass().getPackage()
+            .getName()
+    };
+  }
 
-		// Bootstrap a Limbus System using the descriptor xml.
-		EngineLauncher.bootstrapLimbusSystem();
-		SystemEngine system = (SystemEngine) EngineLauncher.getEngine();
-		LimbusEngine engine = system.getComponent(LimbusEngine.class);
-		DeployService deployService = system.getComponent(DeployService.class);
-
-	}
 }

@@ -29,7 +29,7 @@ public class BasicPluginImpl implements BasicPluginInterface {
 		Set<String> propertySet = new HashSet<>();
 		for (Object key : keySet) {
 			Object value = properties.get(key);
-			String string = new StringBuilder().append(key).append(value).toString();
+			String string = new StringBuilder().append(key).append(" = ").append(value).toString();
 			propertySet.add(string);
 		}
 		return propertySet;

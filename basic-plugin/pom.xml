@@ -19,7 +19,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<dependencies>
 		<!-- The dependency to the host (showcase-launcher): The showcase defines 
 			a plugin interface that is used to interact with the plugin. This interface 

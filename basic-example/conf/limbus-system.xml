@@ -39,7 +39,7 @@
 	<Component>
 		<failOnError>true</failOnError>
 		<requestType>com.remondis.limbus.LimbusEngine</requestType>
-		<componentType>com.remondis.limbus.NoOpEngine</componentType>
+		<componentType>com.github.schuettec.limbus.basic.BasicHostApplication</componentType>
 	</Component>
 
 	<!-- Limbus Core components -->

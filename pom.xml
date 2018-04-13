@@ -6,6 +6,10 @@
 	<version>0.0.1</version>
 	<name>Limbus Examples</name>
 	<packaging>pom</packaging>
+	<modules>
+		<module>basic-example</module>
+		<module>basic-plugin</module>
+	</modules>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -48,10 +52,7 @@
 
 	<properties>
 		<!-- Limbus Version used in this examples -->
-		<limbus.version>2.0.2</limbus.version>
-		
-		<!-- Shared Directory -->
-		<sharedDirectory>${project.basedir}</sharedDirectory>
+		<limbus.version>2.0.1</limbus.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -112,23 +113,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>net.revelc.code.formatter</groupId>
-				<artifactId>formatter-maven-plugin</artifactId>
-				<version>2.7.2</version>
-				<executions>
-					<execution>
-						<phase>validate</phase>
-						<goals>
-							<goal>validate</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<lineEnding>LF</lineEnding>
-					<configFile>${sharedDirectory}/shared/formatter.xml</configFile>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 
@@ -156,8 +140,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<modules>
-		<module>basic-example</module>
-		<module>basic-plugin</module>
-	</modules>
 </project>
