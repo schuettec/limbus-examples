@@ -1,9 +1,27 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.github.schuettec.limbus</groupId>
-    <artifactId>limbus-examples</artifactId>
-    <version>0.0.1</version>
-  </parent>
-  <artifactId>basic-example</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.schuettec.limbus</groupId>
+		<artifactId>limbus-examples</artifactId>
+		<version>0.0.1</version>
+	</parent>
+	<artifactId>basic-example</artifactId>
+	<dependencies>
+		<!-- Limbus Development Library -->
+		<dependency>
+			<groupId>com.remondis.limbus</groupId>
+			<artifactId>limbus-engine-api</artifactId>
+		</dependency>
+		<!-- Limbus Engine Implementation to be used by the host application -->
+		<dependency>
+			<groupId>com.remondis.limbus</groupId>
+			<artifactId>limbus-engine-impl</artifactId>
+		</dependency>
+		<!-- The concrete Logging Framework -->
+		<dependency>
+			<groupId>com.remondis.limbus</groupId>
+			<artifactId>limbus-logging-jdk</artifactId>
+		</dependency>
+	</dependencies>
 </project>
