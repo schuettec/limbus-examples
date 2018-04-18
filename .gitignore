@@ -17,16 +17,12 @@ bin/
 !.idea/inspectionProfiles/Project_Default.xml
 
 classes/
-**/node_modules
-**/*.iml
-**/*.ipr
-**/*.iws
 **/build
 out
 
 csi-tmp/
-renew-app/.gradle/
 *.log
 src/generated/**
 /bin/
 .checkstyle
+/work/
