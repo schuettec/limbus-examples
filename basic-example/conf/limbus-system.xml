@@ -35,77 +35,12 @@
 		<componentType>com.remondis.limbus.DeployServiceImpl</componentType>
 	</Component>
 
-	<!-- Limbus Engine: No-Op for simple Limbus Container features -->
+	<!-- Limbus Engine: The host application specifies the package containing 
+		the classes shared with the plugins. -->
 	<Component>
 		<failOnError>true</failOnError>
 		<requestType>com.remondis.limbus.LimbusEngine</requestType>
-		<componentType>com.github.schuettec.limbus.basic.BasicHostApplication</componentType>
-	</Component>
-
-	<!-- Limbus Core components -->
-	<Component>
-		<failOnError>true</failOnError>
-		<requestType>com.remondis.limbus.actions.ActionService</requestType>
-		<componentType>com.remondis.limbus.actions.LimbusActionService
-		</componentType>
-	</Component>
-
-	<!-- Limbus Maintenance Console -->
-	<Component>
-		<failOnError>true</failOnError>
-		<requestType>com.remondis.limbus.LimbusMaintenanceConsole
-		</requestType>
-		<componentType>com.remondis.limbus.LimbusMaintenanceConsoleImpl
-		</componentType>
-	</Component>
-
-	<!-- Periodic task scheduler -->
-	<Component>
-		<failOnError>true</failOnError>
-		<requestType>com.remondis.limbus.tasks.TaskScheduler</requestType>
-		<componentType>com.remondis.limbus.tasks.TaskSchedulerImpl
-		</componentType>
-	</Component>
-
-	<!-- Limbus Maintenance Components (private) -->
-	<Component>
-		<failOnError>false</failOnError>
-		<componentType>com.remondis.limbus.maintenance.ShowEnvironment
-		</componentType>
-	</Component>
-	<Component>
-		<failOnError>false</failOnError>
-		<componentType>com.remondis.limbus.maintenance.ShowComponents
-		</componentType>
-	</Component>
-	<Component>
-		<failOnError>false</failOnError>
-		<componentType>com.remondis.limbus.maintenance.ShowTasks
-		</componentType>
-	</Component>
-	<Component>
-		<failOnError>false</failOnError>
-		<componentType>com.remondis.limbus.maintenance.ShowVersions
-		</componentType>
-	</Component>
-	<Component>
-		<failOnError>false</failOnError>
-		<componentType>com.remondis.limbus.maintenance.LogFileViewer
-		</componentType>
-	</Component>
-	<Component>
-		<failOnError>false</failOnError>
-		<componentType>com.remondis.limbus.maintenance.ShowSharedClassPath
-		</componentType>
-	</Component>
-	<Component>
-		<failOnError>false</failOnError>
-		<componentType>com.remondis.limbus.maintenance.ShowPluginClassPaths
-		</componentType>
-	</Component>
-	<Component>
-		<failOnError>false</failOnError>
-		<componentType>com.remondis.limbus.maintenance.ShowDeployService
+		<componentType>com.github.schuettec.limbus.basic.BasicHostApplication
 		</componentType>
 	</Component>
 </SystemConfiguration>
