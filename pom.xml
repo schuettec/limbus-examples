@@ -28,16 +28,7 @@
 			<url>N/A</url>
 		</developer>
 	</developers>
-	<repositories>
-		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>bintray-schuettec-maven</id>
-			<name>bintray</name>
-			<url>https://dl.bintray.com/schuettec/maven</url>
-		</repository>
-	</repositories>
+
 	<profiles>
 		<profile>
 			<id>doclint-java8-disable</id>
